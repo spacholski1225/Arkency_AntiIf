@@ -26,6 +26,14 @@ namespace GildedRose
                     }
 
                     DecreaseSellIn(i);
+
+                    if (_items[i].SellIn < 0)
+                    {
+                        if (_items[i].Quality > 0)
+                        {
+                            DecreaseQuality(i);
+                        }
+                    }
                 }
                 else if (IsAgedBrie(i))
                 {
@@ -35,33 +43,18 @@ namespace GildedRose
                     }
 
                     DecreaseSellIn(i);
-                }
-                else if (IsBackstagePass(i))
-                {
-                    HandleBackstagePass(i);
-                }
 
-                if (_items[i].SellIn < 0)
-                {
-                    if (IsAgedBrie(i))
+                    if (_items[i].SellIn < 0)
                     {
                         if (IsQualityLessThan50(i))
                         {
                             IncreaseQuality(i);
                         }
                     }
-                    else if (IsBackstagePass(i))
-                    {
-                        _items[i].Quality = _items[i].Quality - _items[i].Quality;
-                    }
-                    else if (IsGeneric(i))
-                    {
-                        if (_items[i].Quality > 0)
-                        {
-                            DecreaseQuality(i);
-                        }
-                    }
-
+                }
+                else if (IsBackstagePass(i))
+                {
+                    HandleBackstagePass(i);
                 }
             }
         }
@@ -89,6 +82,11 @@ namespace GildedRose
             }
 
             DecreaseSellIn(i);
+
+            if (_items[i].SellIn < 0)
+            {
+                _items[i].Quality = _items[i].Quality - _items[i].Quality;
+            }
         }
 
         private bool IsGeneric(int i)
