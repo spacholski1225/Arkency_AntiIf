@@ -91,5 +91,24 @@ namespace GildedRoseTests
 
             Assert.AreEqual(expected, items[0].Quality);
         }
+
+        private void AssertSulfurasQuality(int expected, int sellIn, int quality)
+        {
+            var items = new List<Item>
+            {
+                new Item
+                {
+                    Name = "Sulfuras, Hand of Ragnaros",
+                    SellIn = sellIn,
+                    Quality = quality
+                }
+            };
+
+            var app = new GildedRose.GildedRose(items);
+            app.UpdateQuality();
+
+
+            Assert.AreEqual(expected, items[0].Quality);
+        }
     }
 }

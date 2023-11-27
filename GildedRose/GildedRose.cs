@@ -17,49 +17,24 @@ namespace GildedRose
             {
                 if (IsSulfuras(i))
                 {
-                    if (_items[i].Quality > 0)
-                    {
-                        if (!IsSulfuras(i))
-                        {
-                            DecreaseQuality(i);
-                        }
-                    }
                 }
                 else if (IsGeneric(i))
                 {
                     if (_items[i].Quality > 0)
                     {
-                        if (!IsSulfuras(i))
-                        {
-                            DecreaseQuality(i);
-                        }
+                        DecreaseQuality(i);
                     }
                 }
-                else
+                else if(IsAgedBrie(i))
                 {
                     if (IsQualityLessThan50(i))
                     {
                         IncreaseQuality(i);
-
-                        if (IsBackstagePass(i))
-                        {
-                            if (_items[i].SellIn < 11)
-                            {
-                                if (IsQualityLessThan50(i))
-                                {
-                                    IncreaseQuality(i);
-                                }
-                            }
-
-                            if (_items[i].SellIn < 6)
-                            {
-                                if (IsQualityLessThan50(i))
-                                {
-                                    IncreaseQuality(i);
-                                }
-                            }
-                        }
                     }
+                }
+                else if (IsBackstagePass(i))
+                {
+                    HandleBackstagePass(i);
                 }
 
                 if (!IsSulfuras(i))
@@ -92,6 +67,29 @@ namespace GildedRose
                         {
                             IncreaseQuality(i);
                         }
+                    }
+                }
+            }
+        }
+
+        private void HandleBackstagePass(int i)
+        {
+            if (IsQualityLessThan50(i))
+            {
+                IncreaseQuality(i);
+                if (_items[i].SellIn < 11)
+                {
+                    if (IsQualityLessThan50(i))
+                    {
+                        IncreaseQuality(i);
+                    }
+                }
+
+                if (_items[i].SellIn < 6)
+                {
+                    if (IsQualityLessThan50(i))
+                    {
+                        IncreaseQuality(i);
                     }
                 }
             }
