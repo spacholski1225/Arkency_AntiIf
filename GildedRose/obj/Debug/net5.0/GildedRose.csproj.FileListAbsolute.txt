@@ -1,0 +1,12 @@
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\bin\Debug\net5.0\GildedRose.deps.json
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\bin\Debug\net5.0\GildedRose.dll
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\bin\Debug\net5.0\ref\GildedRose.dll
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\bin\Debug\net5.0\GildedRose.pdb
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\obj\Debug\net5.0\GildedRose.csproj.AssemblyReference.cache
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\obj\Debug\net5.0\GildedRose.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\obj\Debug\net5.0\GildedRose.AssemblyInfoInputs.cache
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\obj\Debug\net5.0\GildedRose.AssemblyInfo.cs
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\obj\Debug\net5.0\GildedRose.csproj.CoreCompileInputs.cache
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\obj\Debug\net5.0\GildedRose.dll
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\obj\Debug\net5.0\ref\GildedRose.dll
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\obj\Debug\net5.0\GildedRose.pdb

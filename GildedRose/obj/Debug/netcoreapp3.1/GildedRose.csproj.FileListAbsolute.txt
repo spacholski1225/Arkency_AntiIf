@@ -1,0 +1,10 @@
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\bin\Debug\netcoreapp3.1\GildedRose.deps.json
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\bin\Debug\netcoreapp3.1\GildedRose.dll
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\bin\Debug\netcoreapp3.1\GildedRose.pdb
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\obj\Debug\netcoreapp3.1\GildedRose.csproj.AssemblyReference.cache
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\obj\Debug\netcoreapp3.1\GildedRose.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\obj\Debug\netcoreapp3.1\GildedRose.AssemblyInfoInputs.cache
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\obj\Debug\netcoreapp3.1\GildedRose.AssemblyInfo.cs
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\obj\Debug\netcoreapp3.1\GildedRose.csproj.CoreCompileInputs.cache
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\obj\Debug\netcoreapp3.1\GildedRose.dll
+C:\Repositories\ANTI_IF\GildedRose\GildedRose\obj\Debug\netcoreapp3.1\GildedRose.pdb
