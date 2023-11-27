@@ -20,41 +20,51 @@ namespace GildedRose
                 }
                 else if (IsGeneric(i))
                 {
-                    if (_items[i].Quality > 0)
-                    {
-                        DecreaseQuality(i);
-                    }
-
-                    DecreaseSellIn(i);
-
-                    if (_items[i].SellIn < 0)
-                    {
-                        if (_items[i].Quality > 0)
-                        {
-                            DecreaseQuality(i);
-                        }
-                    }
+                    HandleGeneric(i);
                 }
                 else if (IsAgedBrie(i))
                 {
-                    if (IsQualityLessThan50(i))
-                    {
-                        IncreaseQuality(i);
-                    }
-
-                    DecreaseSellIn(i);
-
-                    if (_items[i].SellIn < 0)
-                    {
-                        if (IsQualityLessThan50(i))
-                        {
-                            IncreaseQuality(i);
-                        }
-                    }
+                    HandleAgedBrie(i);
                 }
                 else if (IsBackstagePass(i))
                 {
                     HandleBackstagePass(i);
+                }
+            }
+        }
+
+        private void HandleGeneric(int i)
+        {
+            if (_items[i].Quality > 0)
+            {
+                DecreaseQuality(i);
+            }
+
+            DecreaseSellIn(i);
+
+            if (_items[i].SellIn < 0)
+            {
+                if (_items[i].Quality > 0)
+                {
+                    DecreaseQuality(i);
+                }
+            }
+        }
+
+        private void HandleAgedBrie(int i)
+        {
+            if (IsQualityLessThan50(i))
+            {
+                IncreaseQuality(i);
+            }
+
+            DecreaseSellIn(i);
+
+            if (_items[i].SellIn < 0)
+            {
+                if (IsQualityLessThan50(i))
+                {
+                    IncreaseQuality(i);
                 }
             }
         }
