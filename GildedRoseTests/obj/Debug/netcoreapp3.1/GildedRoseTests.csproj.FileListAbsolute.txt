@@ -156,3 +156,4 @@ C:\Repositories\ANTI_IF\GildedRose\GildedRoseTests\bin\Debug\netcoreapp3.1\Gilde
 C:\Repositories\ANTI_IF\GildedRose\GildedRoseTests\obj\Debug\netcoreapp3.1\GildedRoseTests.dll
 C:\Repositories\ANTI_IF\GildedRose\GildedRoseTests\obj\Debug\netcoreapp3.1\GildedRoseTests.pdb
 C:\Repositories\ANTI_IF\GildedRose\GildedRoseTests\obj\Debug\netcoreapp3.1\GildedRoseTests.genruntimeconfig.cache
+C:\Repositories\ANTI_IF\GildedRose\GildedRoseTests\obj\Debug\netcoreapp3.1\GildedRoseTests.csproj.CopyComplete
