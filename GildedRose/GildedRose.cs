@@ -2,8 +2,8 @@
 
 namespace GildedRose
 {
-	public class GildedRose
-	{
+    public class GildedRose
+    {
         private readonly IList<Item> _items;
 
         public GildedRose(IList<Item> items)
@@ -24,50 +24,44 @@ namespace GildedRose
                     {
                         DecreaseQuality(i);
                     }
+
+                    DecreaseSellIn(i);
                 }
-                else if(IsAgedBrie(i))
+                else if (IsAgedBrie(i))
                 {
                     if (IsQualityLessThan50(i))
                     {
                         IncreaseQuality(i);
                     }
+
+                    DecreaseSellIn(i);
                 }
                 else if (IsBackstagePass(i))
                 {
                     HandleBackstagePass(i);
                 }
 
-                if (!IsSulfuras(i))
-                {
-                    DecreaseSellIn(i);
-                }
-
                 if (_items[i].SellIn < 0)
                 {
-                    if (!IsAgedBrie(i))
-                    {
-                        if (!IsBackstagePass(i))
-                        {
-                            if (_items[i].Quality > 0)
-                            {
-                                if (!IsSulfuras(i))
-                                {
-                                    DecreaseQuality(i);
-                                }
-                            }
-                        }
-                        else
-                        {
-                            _items[i].Quality = _items[i].Quality - _items[i].Quality;
-                        }
-                    }
-                    else
+                    if (IsAgedBrie(i))
                     {
                         if (IsQualityLessThan50(i))
                         {
                             IncreaseQuality(i);
                         }
                     }
+                    else if (IsBackstagePass(i))
+                    {
+                        _items[i].Quality = _items[i].Quality - _items[i].Quality;
+                    }
+                    else if (IsGeneric(i))
+                    {
+                        if (_items[i].Quality > 0)
+                        {
+                            DecreaseQuality(i);
+                        }
+                    }
+
                 }
             }
         }
@@ -93,6 +87,8 @@ namespace GildedRose
                     }
                 }
             }
+
+            DecreaseSellIn(i);
         }
 
         private bool IsGeneric(int i)
